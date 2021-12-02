@@ -48,6 +48,14 @@ message IdentifiedChannel {
   string channel_id = 7;
 }
 
+// channel id and its respective port id 
+message ChannelIDWithPortID {
+  string port_id = 1;
+  string channel_id = 2;
+}
+
+message ChannelIDWit
+
 // State defines if a channel is in one of the following states:
 // CLOSED, INIT, TRYOPEN, OPEN or UNINITIALIZED.
 enum State {

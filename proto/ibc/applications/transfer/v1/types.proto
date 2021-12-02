@@ -1,0 +1,16 @@
+syntax = "proto3";
+package ibc.applications.interchain_accounts.v1;
+
+import "google/protobuf/any.proto";
+import "gogoproto/gogo.proto";
+option go_package = "github.com/cosmos/ibc-go/modules/apps/27-interchain-accounts/types";
+
+// Raw tx body
+message IBCTxRaw {
+  bytes body_bytes = 1 [(gogoproto.moretags) = "yaml:\"body_bytes\""];
+}
+
+// Body of a tx for an ics27 IBC packet
+message IBCTxBody {
+  repeated google.protobuf.Any messages = 1;
+}
